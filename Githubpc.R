@@ -4,6 +4,7 @@ linkPage= "https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic"
 linkPath = '//*[@id="thetable"]'
 
 library(htmltab)
+install.packages(htmltab)
 coronavirus = htmltab(doc = linkPage, which =linkPath, rm_nodata_cols = F) 
 
 ###Limpieza
@@ -17,6 +18,7 @@ new_names = c("Paises", "Casos", "Muertes", "Recuperados")
 
 names(coronavirus) = new_names
 names (coronavirus)
+#complicao
 
 ###Eliminando los pie de p?ginas
 
